@@ -1,3 +1,11 @@
+A Basic CRUD API Template for Express applications
+
+
+
+
+
+
+
 APIEXPRESS
 
 The MIT License (MIT)
