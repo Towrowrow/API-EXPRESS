@@ -5,7 +5,7 @@ const CatSchema = new mongoose.Schema({
         type: String,
         require: true,
         trim: true,
-        lowerCase:
+        lowerCase:true
     },
     age: {
         type: Number,
