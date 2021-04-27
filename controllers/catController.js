@@ -10,11 +10,7 @@ export const postCat  = (req, res) => {
 
 export const addCat = async (req, res) => {
     const cat = new CatModel(req.body)
+    await cat.save()
+    res.send(cat)
 
-    try {
-        await cat.save()
-        res.send(cat)
-    } catch (err){
-        res.status(500).send(err.message)
-    }
 }
