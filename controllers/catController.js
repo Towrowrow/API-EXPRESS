@@ -1,7 +1,5 @@
 import CatModel from '../models/catModel.js'
 
-
-
 //ADD 
 export const addCat = async (req, res) => {
     const cat = new CatModel(req.body)
@@ -28,8 +26,7 @@ export const updateCat = async (req, res) => {
         .findByIdAndUpdate(
             req.params.id,
             req.body,
-            { new: true },
-            (e)=>res.send(e.message)
+            { new: true }
         )
     await cat.save()
     res.send(cat)
