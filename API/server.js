@@ -1,8 +1,8 @@
 import dotenv from "dotenv"
 import express from "express"
 import mongoose from 'mongoose'
-import { catRouter } from './routes/catRoute.js'
-import { dogRouter } from './routes/dogRoute.js'
+import { catController } from './Controllers/catController.js'
+import { dogController } from './Controllers/dogController.js'
 
 dotenv.config()
 
@@ -12,11 +12,8 @@ const app = express()
 app.use(express.json())
 
 
-
-app.use('/cat',catRouter)
-app.use('/dog',dogRouter)
-
-
+app.use('/cat',catController)
+app.use('/dog',dogController)
 
 
 mongoose.connect(process.env.MONGODB, {

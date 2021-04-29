@@ -1,6 +1,6 @@
 import express from 'express'
-import { addDog, getDogById, getDogs, removeDog, updateDog } from '../controllers/dogController.js'
-import { catchErrors } from '../helpers.js'
+import { addDog, getDogById, getDogs, removeDog, updateDog } from '../../Business/Managers/dogManager.js'
+import { catchErrors } from '../../Business/Utils/helpers.js'
 
 const router = express.Router()
 
@@ -15,4 +15,4 @@ router.patch('/:id',catchErrors(updateDog))
 //DELETE
 router.delete('/:id',catchErrors(removeDog))
 
-export { router as dogRouter }
+export { router as dogController }
