@@ -18,7 +18,7 @@ Install with [npm](https://www.npmjs.com/):
 $ npm install 
 ```
 
-
+you will need an .env file at the root of the project which will contain a PORT variable as well as MONGODB which will contain your connection string to your MongoDB database
 
 ## Start
 
