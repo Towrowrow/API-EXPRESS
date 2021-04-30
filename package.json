@@ -4,8 +4,8 @@
   "description": "APIEXPRESS",
   "main": "server.js",
   "scripts": {
-  "dev":"nodemon API/server.js",
-  "prod":"node API/server.js"
+    "dev": "nodemon API/server.js",
+    "prod": "node API/server.js"
   },
   "author": "",
   "license": "ISC",
