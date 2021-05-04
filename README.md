@@ -18,7 +18,8 @@ Install with [npm](https://www.npmjs.com/):
 $ npm install 
 ```
 
-you will need an .env file at the root of the project which will contain a PORT variable as well as MONGODB which will contain your connection string to your MongoDB database
+you will need an .env file at the root of the project which will contain a PORT variable as well as MONGODB which will contain your connection string to your MongoDB database or you will have the following error :
+[UnhandledPromiseRejectionWarning: MongooseError: The `uri` parameter to `openUri()` must be a string, got "undefined". Make sure the first parameter to `mongoose.connect()` or `mongoose.createConnection()` is a string.]
 
 ## Start
 
