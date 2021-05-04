@@ -1,29 +1,29 @@
 import DogModel from "../../Data/models/dogModel.js";
 
 export default class DogServices {
-  static async getAllDogs() {
+  async getAllDogs() {
     const dogs = await DogModel.find({});
     return dogs;
   }
 
-  static async getDog(id) {
+  async getDog(id) {
     const dog = await DogModel.find({ _id: id });
     return dog;
   }
 
-  static async addDog(dog) {
+  async addDog(dog) {
     const newDog = new DogModel(dog);
     await newDog.save();
     return newDog;
   }
 
-  static async updateDog(id, dog) {
+  async updateDog(id, dog) {
     const updatedDog = await DogModel.findByIdAndUpdate(id, dog, { new: true });
     await updatedDog.save();
     return updatedDog;
   }
 
-  static async removeDog(id) {
+  async removeDog(id) {
     const dog = await DogModel.findByIdAndDelete(id);
     if (!dog) {
       return null;
@@ -31,5 +31,3 @@ export default class DogServices {
     return dog;
   }
 }
-
-// module.exports = DogServices
